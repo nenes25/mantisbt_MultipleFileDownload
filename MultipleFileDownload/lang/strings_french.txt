@@ -1,0 +1,13 @@
+<?php
+/**
+ * Module MultipleFileDownload
+ */
+$s_plugin_MultipleFileDownload_plugin_title = 'Téléchargement de pièces jointes';
+$s_plugin_MultipleFileDownload_plugin_description = 'Permet de télécharger plusieurs pièces jointes en un clic';
+$s_plugin_MultipleFileDownload_multiple_file_download = 'Téléchargement de pièces jointes en un clic';
+$s_plugin_MultipleFileDownload_files = 'Pièces jointes';
+$s_plugin_MultipleFileDownload_check_files_download = 'Cocher les pièces jointes à télécharger';
+$s_plugin_MultipleFileDownload_download_files = 'Télécharger';
+$s_plugin_MultipleFileDownload_no_selected_files_for_download = 'Erreur : pas de fichier à téléchargé selectionné';
+$s_plugin_MultipleFileDownload_error_unable_to_create_zip_file = 'Erreur : Impossible de creer l\'archive de téléchargement';
+

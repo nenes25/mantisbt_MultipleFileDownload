@@ -16,8 +16,8 @@ class MultipleFileDownloadPlugin extends MantisPlugin {
      */
     function register() {
         
-        $this->name = 'Mutiple Filed Download';//lang_get( 'plugin_multiplefiledownload_title' );
-        $this->description = 'Mutiple Filed Download'; //lang_get( 'plugin_multiplefiledownload_description' );
+        $this->name = plugin_lang_get( 'plugin_title' ); //'Mutiple Filed Download';
+        $this->description = plugin_lang_get( 'plugin_description' ); 'Mutiple Filed Download'; 
         $this->version = '0.1.0';
         $this->requires = array(
             'MantisCore' => '1.2.0',
@@ -53,17 +53,17 @@ class MultipleFileDownloadPlugin extends MantisPlugin {
                 . '<form name="plugin_multiplefiledownload_form" method="post" action="'.plugin_page('download_script.php').'">'
                 . '<input type="hidden" name="bug_id" value="'.$t_bug_id.'" />'        
                 . '<table class="width100">'
-                . '<tr colspan="2"><td class="form-title">Multiple-File Download</td></tr>'
-                . '<tr class="row-2"><td class="category">Files</td>'
+                . '<tr colspan="2"><td class="form-title">'.plugin_lang_get( 'multiple_file_download').'</td></tr>'
+                . '<tr class="row-2"><td class="category">'.plugin_lang_get( 'files').'</td>'
                 . '<td width="75%">';
-                echo '<ul>';
-                echo '<p>Cocher les pièces jointes que vous souhaitez télécharger</p>';
+                echo '<ul style="list-style:none;">';
+                echo '<p>'.plugin_lang_get( 'check_files_download' ).'</p>';
                 foreach ($t_bug_files as $t_bug_file) {
                     if ($t_bug_file['can_download'])
                         echo '<li><input type="checkbox" class="plugin_multiplefiledownload_files" name="files[]" value="' . $t_bug_file['id'] . '">' . $t_bug_file['display_name'] . '</li>';
                 }
                 echo '</ul></td></tr>';
-                echo '<tr class="row-1"><td class="category">&nbsp;</td><td><input type="submit" value="Envoyer" id="plugin_multiplefiledownload_submit"/></td></tr>';
+                echo '<tr class="row-1"><td class="category">&nbsp;</td><td><input type="submit" value="'.plugin_lang_get( 'download_files' ).'" id="plugin_multiplefiledownload_submit"/></td></tr>';
                 echo '</table></form></div>';
                 
                 #Javascript de gestion @ToDO : le rajouter dans un js spécifique
@@ -79,26 +79,9 @@ class MultipleFileDownloadPlugin extends MantisPlugin {
                             });
                             
                             if ( ! files_id.length ) {
-                                alert("Vous n\'avez pas sélectionné de de pièces jointes à télécharger");
+                                alert("'.plugin_lang_get( 'no_selected_files_for_download' ).'");
                                 return false;
                             }
-                            
-                            /*$.ajax({
-                                method : "post",
-                                url : "'.plugin_page('download_script.php').'",
-                                dataType: "json",    
-                                data : {"bug_id" :'.$t_bug_id.',"files" :files_id},
-                                success: function(msg){
-                                    if ( msg == 0 ) {
-                                        alert("Unable to download files");
-                                    }
-                                    else {
-                                        
-                                    }
-                                }
-                            });*/
-                                
-                            
                         });
                         
                     });

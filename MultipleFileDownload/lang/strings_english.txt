@@ -1,0 +1,13 @@
+<?php
+/**
+ * Module MultipleFileDownload
+ */
+$s_plugin_MultipleFileDownload_plugin_title = 'Mutiple File Download';
+$s_plugin_MultipleFileDownload_plugin_description = 'Download multiple bug attached files in one click';
+$s_plugin_MultipleFileDownload_multiple_file_download = 'Multiple Attached Files Download';
+$s_plugin_MultipleFileDownload_files = 'Attached Files';
+$s_plugin_MultipleFileDownload_check_files_download = 'Check the files you want to download';
+$s_plugin_MultipleFileDownload_download_files = 'Download Files';
+$s_plugin_MultipleFileDownload_no_selected_files_for_download = 'Error : no files selected for download';
+$s_plugin_MultipleFileDownload_error_unable_to_create_zip_file = 'Error : Unable to create the zip file';
+
