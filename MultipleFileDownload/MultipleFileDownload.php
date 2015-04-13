@@ -16,12 +16,12 @@ class MultipleFileDownloadPlugin extends MantisPlugin {
      */
     function register() {
         
-        $this->name = plugin_lang_get( 'plugin_title' ); //'Mutiple Filed Download';
+        $this->name = plugin_lang_get( 'plugin_title' );
         $this->description = plugin_lang_get( 'plugin_description' ); 'Mutiple Filed Download'; 
         $this->version = '0.1.0';
         $this->requires = array(
             'MantisCore' => '1.2.0',
-            //'jQuery' => '1.11'
+            'jQuery' => '1.11'
             );
         $this->author = 'Hennes Hervé';
         $this->url = 'http://www.h-hennes.fr/blog/';
@@ -36,8 +36,7 @@ class MultipleFileDownloadPlugin extends MantisPlugin {
     }
 
     /**
-     * Affichage du code dans la page de visualisation d'un bug
-     * Placement dans le DOM via jquery
+     * Affichage du formulaire de téléchargement dans la page de visualisation d'un bug
      */
     function prepareDownloadDatas() {
 
@@ -66,7 +65,7 @@ class MultipleFileDownloadPlugin extends MantisPlugin {
                 echo '<tr class="row-1"><td class="category">&nbsp;</td><td><input type="submit" value="'.plugin_lang_get( 'download_files' ).'" id="plugin_multiplefiledownload_submit"/></td></tr>';
                 echo '</table></form></div>';
                 
-                #Javascript de gestion @ToDO : le rajouter dans un js spécifique
+                #Javascript de gestion
                 echo '<script type="text/javascript">
                     jQuery(document).ready(function($){
                     
