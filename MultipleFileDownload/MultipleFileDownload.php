@@ -17,7 +17,7 @@ class MultipleFileDownloadPlugin extends MantisPlugin {
     function register() {
         
         $this->name = plugin_lang_get( 'plugin_title' );
-        $this->description = plugin_lang_get( 'plugin_description' ); 'Mutiple Filed Download'; 
+        $this->description = plugin_lang_get( 'plugin_description' );
         $this->version = '0.1.0';
         $this->requires = array(
             'MantisCore' => '1.2.0',
